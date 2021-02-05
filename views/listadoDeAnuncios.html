@@ -1,12 +1,15 @@
 <% anuncios.forEach(anuncio => { %>
-  <h3><%= anuncio.name %></h3>
-  <p><%= 'Precio: ' + anuncio.price + ' €' %></p>
-  <% if (anuncio.onSale) { %>
+<div class="anuncio">
+  <div class="texto">
+    <h2><%= anuncio.name %></h2>
+    <p><%= 'Precio: ' + anuncio.price + ' €' %></p>
+    <% if (anuncio.onSale) { %>
     <p>Se vende</p>
-  <% } else { %>
+    <% } else { %>
     <p>Se busca</p>
-  <% } %>
-  <p><%= 'Etiquetas: ' + anuncio.tags %></p>
-  <img src="<%= anuncio.photo %>" alt="" class="thumbnail">
-
+    <% } %>
+    <p><%= 'Etiquetas: ' + anuncio.tags %></p>
+  </div>
+  <img src="<%= anuncio.photo %>" alt="" class="thumbnail" />
+</div>
 <% }) %>
